@@ -27,6 +27,7 @@ public class MainController {
 
     @GetMapping("/users")  // Отображение списка пользователей
     public String usersPage(Model model) {
+        System.out.println("Users Page");
         Iterable<DemoUser> users = userRepository.findAll();
         model.addAttribute("users", users);
         return "users";
